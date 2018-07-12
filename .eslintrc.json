@@ -1,0 +1,32 @@
+{
+	"parser": "babel-eslint",
+	"env": {
+		"es6": true,
+		"node": true
+	},
+	"globals": {
+		"document": false,
+		"window": false,
+		"console": false,
+		"test": false,
+		"expect": false
+	},
+	"extends": [
+		"plugin:flowtype/recommended"
+	],
+	"plugins": [
+		"flowtype"
+	],
+	"rules": {
+		"flowtype/no-types-missing-file-annotation": 0,
+		"no-unused-vars": 0,
+		"indent": [
+			2,
+			2
+		],
+		"semi": [
+			"error",
+			"always"
+		]
+	}
+}
