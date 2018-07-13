@@ -1,6 +1,5 @@
-# Empty react project
-- webpack
-- es6
-- jest
-- flow
-- eslint
+# POKEMON QUEST
+- Is just shit
+
+## For make it run:
+- `npm run dev`

@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: './src/app.js',
+  entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -24,6 +24,7 @@ module.exports = {
     extensions: ['*', '.js', '.jsx', '.css']
   },
   devServer: {
-    contentBase: './'
+    contentBase: './',
+    historyApiFallback: true
   }
 };

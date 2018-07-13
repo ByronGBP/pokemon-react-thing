@@ -1,3 +1,14 @@
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
-  background: red;
+  margin: 0;
+  padding: 0;
+  background: #F2E1E1
 }
