@@ -6,7 +6,8 @@ import Home from './Home';
 import NotFound from './NotFound';
 import Header from './Header';
 
-import Pokemons from '../containers/Pokemons';
+import Pokemon from '../containers/PokemonContainer';
+import Pokemons from '../containers/PokemonsContainer';
 import Moves from '../containers/Moves';
 import Types from '../containers/Types';
 import Colors from '../containers/Colors';
@@ -16,25 +17,31 @@ const Root = () => (
   <Router>
     <div>
       <Switch>
-        <Route path="/pokemons" render={({ location: { pathname } }: ContextRouter) => (
+        <Route path="/pokemons" exact render={({ location: { pathname } }: ContextRouter) => (
           <Fragment>
             <Header currentPath={pathname}/>
             <Pokemons/>
           </Fragment>
         )}/>
-        <Route path="/types" render={({ location: { pathname } }: ContextRouter) => (
+        <Route path="/pokemons/:id" render={({ location: { pathname } }: ContextRouter) => (
+          <Fragment>
+            <Header currentPath='//'/>
+            <Pokemon/>
+          </Fragment>
+        )}/>
+        <Route path="/types" exact render={({ location: { pathname } }: ContextRouter) => (
           <Fragment>
             <Header currentPath={pathname}/>
             <Types/>
           </Fragment>
         )}/>
-        <Route path="/moves" render={({ location: { pathname } }: ContextRouter) => (
+        <Route path="/moves" exact render={({ location: { pathname } }: ContextRouter) => (
           <Fragment>
             <Header currentPath={pathname}/>
             <Moves/>
           </Fragment>
         )}/>
-        <Route path="/colors" render={({ location: { pathname } }: ContextRouter) => (
+        <Route path="/colors" exact render={({ location: { pathname } }: ContextRouter) => (
           <Fragment>
             <Header currentPath={pathname}/>
             <Colors/>

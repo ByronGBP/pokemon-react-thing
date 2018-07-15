@@ -15,7 +15,7 @@ type OwnProps = {
 
 const mapStateToProps = (state: State, ownProps: OwnProps) => {
   return {
-    active: state.currentPath === ownProps.path
+    active: state.currentPath === ownProps.path && ownProps.location === ownProps.path
   };
 };
 
