@@ -4,10 +4,12 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "node server-heroku.js",
     "dev": "webpack --config webpack.config.js --watch & webpack-dev-server --config webpack.config.js --mode development",
     "flow": "flow",
     "test": "jest",
-    "flow:watch": "flow-watch"
+    "flow:watch": "flow-watch",
+    "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress"
   },
   "author": "ByronGBP",
   "license": "ISC",
